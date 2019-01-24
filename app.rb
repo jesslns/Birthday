@@ -15,14 +15,11 @@ post '/countdown' do
   @day = params[:day]
   @month = params[:month]
   @now = Time.new;
-  @day_now = @now.day
-  @month_now = @now.month
-  #if @month < @month_now && @day < @day_now
-    #@year = @now.year+1
-  #else @year = @now.yeare
-#  end
-  #@countdown_date = Time.new(@year,@month,@day)
-  #@countdown = @countdown_date - @now
+  @countdown_date = Time.new(2019,@month,@day)
+  @countdown = (@countdown_date - @now)/(60*60*24)
+  if @countdown < 0
+    @countdown += 365
+  end
   erb(:countdown)
 end
 

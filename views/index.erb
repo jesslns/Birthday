@@ -1,8 +1,22 @@
-<body style="background-color:powderblue;">
+<style>
+  body {
+    background-color: powderblue;
+    text-align: center;
+  }
+  h1 {
+    color: red;
+    font-size: 500%;
+  }
+h2 {
+    font-size: 200%;
+}
 
-<h1 style="color:red; text-align:center; font-size:500%"> Hello! 你好！</h1>
+  </style>
 
-<h2 style="text-align:center; font-size:200%"> What is your name?</h2>
+
+<h1> Hello! 你好！</h1>
+
+<h2> What is your name?</h2>
 
 <form action='/greeting' method='post'>
   <input type='text' name='name'>
@@ -28,6 +42,7 @@
     <option value="11">November</option>
     <option value="12">December</option>
     </select>
+    <br>
     <br>
     <input type='submit' value='Go'>
     </form>

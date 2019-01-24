@@ -1,19 +1,13 @@
 
 <style>
 p {
-  text-align: center;
   font-size: 60px;
-  margin-top: 0px;
+  margin-top: 80px;
 }
-body {background-color:powderblue;
+body {
+  background-color:powderblue;
+  text-align: center;
 }
 </style>
 
-<p> Your birthday is in day(s)</p>
-
-<%=@day_now%><br>
-<%=@month_now%>
-<br>
-<%=@day%>
-<br>
-<%=@month%>
+<p> Your birthday is in <%= @countdown.ceil %> day(s)</p>
