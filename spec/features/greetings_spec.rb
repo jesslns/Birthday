@@ -25,12 +25,14 @@ end
       expect(page).to have_content "When's your birthday?"
     end
 
-    scenario "User input birthday from drop-down list" do
+    scenario "input birthday and return countdown" do
+      time = Time.new
+      month = time.strftime "%B"
       visit('/')
       fill_in :name, with:'Raymond'
-      fill_in :day, with: 1
-      select 'May', from: 'month'
+      fill_in :day, with: time.day + 1
+      select month, from: 'month'
       click_button 'Go'
-      expect(page).to have_content "Your birthday is in day(s)"
+      expect(page).to have_content "Your birthday is in 1 day(s)"
     end
   end
