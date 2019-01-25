@@ -7,7 +7,7 @@
     color: red;
     font-size: 500%;
   }
-h2 {
+p {
     font-size: 200%;
 }
 
@@ -16,16 +16,13 @@ h2 {
 
 <h1> Hello! 你好！</h1>
 
-<h2> What is your name?</h2>
-
-<form action='/greeting' method='post'>
-  <input type='text' name='name'>
-  <input type='submit' value='Submit'>
-</form>
-
-<h2 style="text-align:center; font-size:200%"> When's your birthday?</h2>
-
   <form action='/countdown' method='post'>
+    <p>What is your name?</p>
+    <br>
+    <input type='text' name='name'>
+    <br>
+    <p>When's your birthday?</p>
+    <br>
     Day: <input type='number' name='day'>
     Month:
     <select name="month">

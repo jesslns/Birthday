@@ -6,12 +6,8 @@ get '/' do
   erb(:index)
 end
 
-post '/greeting' do
-  @name = params[:name]
-  erb(:greeting)
-end
-
 post '/countdown' do
+  @name = params[:name]
   @day = params[:day]
   @month = params[:month]
   @now = Time.new;
@@ -20,7 +16,7 @@ post '/countdown' do
   if @countdown < 0
     @countdown += 365
   end
-  erb(:countdown)
+    erb(:greeting)
 end
 
 end

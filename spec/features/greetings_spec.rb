@@ -11,12 +11,6 @@ end
       expect(page).to have_content "What is your name?"
     end
 
-    scenario "User fill in name" do
-      visit('/')
-      fill_in :name, with:'Raymond'
-      click_button 'Submit'
-      expect(page).to have_content "Happy Birthday Raymond!"
-    end
   end
 
   feature "Ask for birthday" do
@@ -33,6 +27,17 @@ end
       fill_in :day, with: time.day + 1
       select month, from: 'month'
       click_button 'Go'
-      expect(page).to have_content "Your birthday is in 1 day(s)"
+      expect(page).to have_content "Raymond, your birthday is in 1 day(s)!"
+    end
+
+    scenario "Say happy Birthday" do
+      time = Time.new
+      month = time.strftime "%B"
+      visit('/')
+      fill_in :name, with:'Raymond'
+      fill_in :day, with: time.day 
+      select month, from: 'month'
+      click_button 'Go'
+      expect(page).to have_content "Happy Birthday Raymond!"
     end
   end

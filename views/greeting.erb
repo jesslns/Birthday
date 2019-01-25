@@ -10,4 +10,8 @@ body {
 }
 </style>
 
+<% if @countdown.ceil == 365 %>
 <p>Happy  Birthday <b><%=@name%><b>! </p>
+<% else %>
+<p> <%=@name%>, your birthday is in <%= @countdown.ceil %> day(s)!</p>
+<% end %>
