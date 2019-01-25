@@ -35,9 +35,9 @@ end
       month = time.strftime "%B"
       visit('/')
       fill_in :name, with:'Raymond'
-      fill_in :day, with: time.day 
+      fill_in :day, with: time.day
       select month, from: 'month'
       click_button 'Go'
-      expect(page).to have_content "Happy Birthday Raymond!"
+      expect(page).to have_content "HaPpY BirTHdAy Raymond!"
     end
   end

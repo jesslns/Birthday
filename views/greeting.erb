@@ -11,7 +11,7 @@ body {
 </style>
 
 <% if @countdown.ceil == 365 %>
-<p>HaPpY  BirTHdAy <b><%=@name%><b>! </p>
+<p>HaPpY BirTHdAy <b><%=@name%><b>! </p>
 <% else %>
 <p> <%=@name%>, your birthday is in <b><%= @countdown.ceil %></b> day(s)!</p>
 <% end %>
