@@ -5,25 +5,26 @@
   }
   h1 {
     color: red;
-    font-size: 500%;
+    font-size: 400%;
+    margin-top: 100px;
   }
 p {
     font-size: 200%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+</style>
 
-  </style>
 
-
-<h1> Hello! 你好！</h1>
+<h1> Hello!<br> 你好！</h1>
 
   <form action='/countdown' method='post'>
     <p>What is your name?</p>
-    <br>
     <input type='text' name='name'>
     <br>
-    <p>When's your birthday?</p>
     <br>
-    Day: <input type='number' name='day'>
+    <p>When's your birthday?</p>
+    Day: <input type='number' name='day' min='1' max='31'>
     Month:
     <select name="month">
     <option value="1">January</option>
