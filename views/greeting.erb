@@ -1,17 +1,20 @@
 <style>
 p {
   font-size: 60px;
-  margin-top: 200px;
-  font-size:500%;
+  margin-top: 100px;
+  margin-bottom: 50px
+  font-size: 600%;
 }
 body {
   background-color:powderblue;
   text-align: center;
 }
+
 </style>
 
 <% if @countdown.ceil == 365 %>
-<p>HaPpY BirTHdAy <b><%=@name%><b>! </p>
+<p><b>HaPpY BirTHdAy <%=@name%>!</b> </p>
+  <img src='https://image.flaticon.com/icons/svg/233/233881.svg' width="350">
 <% else %>
 <p> <%=@name%>, your birthday is in <b><%= @countdown.ceil %></b> day(s)!</p>
 <% end %>
